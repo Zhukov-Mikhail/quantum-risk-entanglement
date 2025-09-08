@@ -1,7 +1,7 @@
 # Quantum Risk Entanglement Analyzer
 
 [![Tech Stack](https://img.shields.io/badge/Tech-Python%20%7C%20Quantum_Graph_Algorithms%20%7C%20NetworkX-purple)]
-[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed-brightgreen)](https://yourusername.github.io/quantum-risk-entanglement)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed-brightgreen)](https://Zhukov-Mikhail.github.io/quantum-risk-entanglement)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Анализируйте риски как запутанные квантовые состояния
