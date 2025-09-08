@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Risk Entanglement Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-force-3d/dist/d3-force-3d.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="entanglement-icon">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="connection"></div>
+                </div>
+                <h1>Quantum Risk Entanglement Analyzer</h1>
+            </div>
+            <p class="tagline">Анализируйте риски как запутанные квантовые состояния</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="setup-panel">
+                <h2>Настройка анализа</h2>
+                
+                <div class="input-group">
+                    <label for="projectFile">Загрузите проект (JSON):</label>
+                    <input type="file" id="projectFile" accept=".json">
+                    <div class="sample-links">
+                        <a href="#" onclick="loadSampleProject('fintech')">Пример: FinTech проект</a> |
+                        <a href="#" onclick="loadSampleProject('construction')">Пример: Строительство</a>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>Параметры анализа:</label>
+                    <div class="slider-container">
+                        <label>Глубина анализа: <span id="depthValue">3</span> уровня</label>
+                        <input type="range" id="depthSlider" min="1" max="5" value="3">
+                    </div>
+                    <div class="slider-container">
+                        <label>Чувствительность: <span id="sensitivityValue">70</span>%</label>
+                        <input type="range" id="sensitivitySlider" min="30" max="90" value="70">
+                    </div>
+                </div>
+                
+                <button id="runAnalysis" class="primary-btn">
+                    <span class="icon">🔬</span> Запустить квантовый анализ
+                </button>
+                
+                <div id="status" class="status-panel"></div>
+            </div>
+            
+            <div class="results-panel" id="resultsPanel" style="display:none;">
+                <h2>Результаты анализа</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">Уровень запутанности</div>
+                        <div class="metric-value" id="entanglementLevel">0</div>
+                        <div class="metric-description">Сложность взаимосвязей между рисками</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Квантовые узлы</div>
+                        <div class="metric-value" id="quantumNodes">0</div>
+                        <div class="metric-description">Критически важные точки в проекте</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Прогнозируемая стабильность</div>
+                        <div class="metric-value" id="stability">0%</div>
+                        <div class="metric-description">Вероятность успешного завершения</div>
+                    </div>
+                </div>
+                
+                <div class="visualization-container">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="network">Сеть рисков</button>
+                        <button class="tab-btn" data-tab="matrix">Матрица влияния</button>
+                        <button class="tab-btn" data-tab="recommendations">Рекомендации</button>
+                    </div>
+                    
+                    <div id="networkView" class="tab-content active">
+                        <div id="riskNetwork" class="chart"></div>
+                        <p class="quantum-explanation">
+                            Визуализация квантовой сети рисков. Размер узлов отражает важность риска, 
+                            толщина связей показывает силу запутанности между рисками.
+                        </p>
+                    </div>
+                    
+                    <div id="matrixView" class="tab-content" style="display:none;">
+                        <div id="influenceMatrix" class="chart"></div>
+                    </div>
+                    
+                    <div id="recommendationsView" class="tab-content" style="display:none;">
+                        <div class="recommendations-list" id="recommendationsList"></div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="exportPDF" class="secondary-btn">
+                        <span class="icon">📥</span> Экспорт отчета PDF
+                    </button>
+                    <button id="simulateScenario" class="primary-btn">
+                        <span class="icon">🎭</span> Симуляция сценариев
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Quantum Risk Entanglement Analyzer v1.0 &copy; 2025 | Анализ запутанных рисков проекта</p>
+        </footer>
+    </div>
+    
+    <script src="qre-engine.js"></script>
+    <script src="network-visualization.js"></script>
+</body>
+</html>
